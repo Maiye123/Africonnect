@@ -1,16 +1,18 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Mail, Lock } from 'lucide-react'
 import AuthLayout from '../components/AuthLayout'
 import FormField from '../components/FormField'
 import PasswordField from '../components/PasswordField'
 
 export default function LoginPage() {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  function handleSubmit(e) {
-    e.preventDefault()
+  function goToDashboard(e) {
+    e?.preventDefault()
+    navigate('/dashboard', { replace: true })
   }
 
   return (
@@ -19,7 +21,7 @@ export default function LoginPage() {
         <h1 className="auth-title">Login To Your Account</h1>
         <p className="auth-subtitle">Welcome back! Input your login details</p>
 
-        <form className="auth-form" onSubmit={handleSubmit}>
+        <form className="auth-form" noValidate onSubmit={goToDashboard}>
           <FormField
             label="Email"
             name="email"
