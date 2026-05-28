@@ -1,3 +1,32 @@
+Africonnect
+
+Africonnect is a web application currently under development focused on authentication, user onboarding, and dashboard management.
+
+Features Implemented So Far
+Login page
+Sign up page
+Forgot password page
+Dashboard page
+Settings page structure
+OTP verification flow for account creation (in view)
+Current Progress
+
+The OTP verification is currently configured for testing purposes and displays the OTP within the application flow temporarily. Email based OTP delivery integration is still in progress and will be implemented fully in a later update.
+
+Technologies Used
+React
+Node.js
+HTML
+CSS
+Notes
+
+Some dashboard and settings features that require live figures are currently placeholders pending backend and account integration.
+
+Status
+
+Project currently in active development.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
